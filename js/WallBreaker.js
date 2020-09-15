@@ -115,10 +115,10 @@ function playing(){
 function gameBoard(){
 	this.update = function(){
 
-		if (document.getElementById("musicCheck").checked) {
+		/*if (document.getElementById("musicCheck").checked) {
 			//sound = document.getElementById("music");
 			//sound.play();
-		}
+		}*/
 		c.fillStyle = "black";
 		if(x <= (mouseX+100) && (x+7) >= mouseX && (y+7) >= 350 && y <= 355){
 			if((y+7) == 350){
