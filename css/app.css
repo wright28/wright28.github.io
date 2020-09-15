@@ -31,7 +31,7 @@ body {
 }
 
 h1 {
-	font-family: 'Comic Sans MS', cursive;
+	font-family: /*'Comic Sans MS'*/'Avenir Black', cursive;
 	color: white;
 }
 
