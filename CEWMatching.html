@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Customer Experience Week | Memory Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="icon" href="images/rebel.ico">
+    <link rel="shortcut icon" href="images/rebel.ico">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/app.css">-->
+</head>
+<!--<header style="display: block;position: relative;z-index: 999; margin-bottom: 46px;">
+  <div style="margin-left: auto; margin-right: auto; width: 960px;">
+    <div style="width: 940px;">
+      <div style="position: relative; background: #fe8c21; z-index: 999; padding-left: 20px; padding-right: 35px;">
+        <nav style="position:relative;padding: 0px 0 0 0;">
+          <ul class="sf-menu">
+            <li class="current"><a href="index.html">Home</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">Games</button>
+                <div class="dropdown-content">
+                  <a href="TTT.html">Tic Tac Toe</a>
+                  <a href="match.html">Matching Game</a>
+                  <a href="WallBreaker.html">Wall Breaker</a>
+                  <a href="snake.html">Snake</a>
+                </div>
+            </div>
+            <li><a href="finances.html">Budget Calculator</a></li>
+            <li><a href="contact.html">About Us</a></li>
+          </ul>
+        </nav>
+      <div style="clear: both; display: block; overflow: hidden; visibility: hidden;  width: 0;  height: 0;"></div>
+      </div>
+    <div style="clear: both; display: block; overflow: hidden; visibility: hidden;  width: 0;  height: 0;"></div>
+    </div>
+  </div>
+  <br>-->
+</header>
+<body>
+    <div class="container">
+        <header>
+            <h1>Memory Game</h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Move(s)
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="cat">
+                <i class="fas fa-cat"></i>
+            </li>
+            <li class="card" type="feather">
+                <i class="fas fa-feather"></i>
+            </li>
+            <li class="card" type="dragon">
+                <i class="fas fa-dragon"></i>
+            </li>
+            <li class="card" type="fish" >
+                <i class="fas fa-fish"></i>
+            </li>
+            <li class="card" type="dove">
+                <i class="fas fa-dove"></i>
+            </li>
+            <li class="card" type="dragon">
+                <i class="fas fa-dragon"></i>
+            </li>
+            <li class="card" type="frog">
+                <i class="fas fa-frog"></i>
+            </li>
+            <li class="card" type="paw">
+                <i class="fas fa-paw"></i>
+            </li>
+            <li class="card" type="spider">
+                <i class="fas fa-spider"></i>
+            </li>
+            <li class="card" type="cat">
+                <i class="fas fa-cat"></i>
+            </li>
+            <li class="card" type="feather">
+                <i class="fas fa-feather"></i>
+            </li>
+            <li class="card" type="fish">
+                <i class="fas fa-fish"></i>
+            </li>
+            <li class="card" type="dove">
+                <i class="fas fa-dove"></i>
+            </li>
+            <li class="card" type="frog">
+                <i class="fas fa-frog"></i>
+            </li>
+            <li class="card" type="paw">
+                <i class="fas fa-paw"></i>
+            </li>
+            <li class="card" type="spider">
+                <i class="fas fa-spider"></i>
+            </li>
+        </ul>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>Congratulations 🎉</h2>
+                <a class="close" href=# >×</a>
+                <div class="content-1">
+                    Congratulations you're a winner 🎉🎉
+                </div>
+                <div class="content-2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                    <p>Rating:  <span id=starRating></span></p>
+                </div>
+                <button id="play-again"onclick="playAgain()">
+                    Play again 😄</a>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
