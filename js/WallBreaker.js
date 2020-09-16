@@ -30,7 +30,7 @@ var brickW;
 var brickH;
 var impact = new Array(55);
 //var sound;
-//var sound = document.getElementById("music");
+var sound = document.getElementById("music");
 
 var board;
 var mouseX = 100;
@@ -115,10 +115,10 @@ function playing(){
 function gameBoard(){
 	this.update = function(){
 
-		/*if (document.getElementById("musicCheck").checked) {
+		if (document.getElementById("musicCheck").checked) {
 			//sound = document.getElementById("music");
-			//sound.play();
-		}*/
+			sound.play();
+		}
 		c.fillStyle = "black";
 		if(x <= (mouseX+100) && (x+7) >= mouseX && (y+7) >= 350 && y <= 355){
 			if((y+7) == 350){
@@ -311,12 +311,12 @@ function output(){
 
 function stop(){
 	clearInterval(interval);
-	//sound.pause();
-	//sound.currentTime = 0;
-	//document.getElementById("musicCheck").checked = false;
+	sound.pause();
+	sound.currentTime = 0;
+	document.getElementById("musicCheck").checked = false;
 	if(score==55){
 		//count = score;
-		//winnerSound();
+		winnerSound();
 		if(level == 1){
 			level = 2;
 		}else if(level == 2){
@@ -328,7 +328,7 @@ function stop(){
 		}
 		alert("You Win!");
 	}else{
-		//loserSound();
+		loserSound();
 		alert("You Lose!");
 	}
 	init();
@@ -595,7 +595,7 @@ function levelFive(){
 		}
 	}
 }
-/*
+
 function soundEffects(){
 	var x = document.getElementById("soundEffect");
 	x.play();
@@ -608,4 +608,3 @@ function loserSound(){
     var x = document.getElementById("loser");
     x.play();
 }
-*/
