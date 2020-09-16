@@ -3,8 +3,6 @@ const canvas = document.querySelector('canvas');
 
 // initiating 2D context on it
 const c = canvas.getContext('2d');
-//var w = canvas.getContext("2d");
-//const checkbox = $("#musicCheck");
 
 var interval;
 var boardInterval;
@@ -29,8 +27,7 @@ var brickY;
 var brickW;
 var brickH;
 var impact = new Array(55);
-//var sound;
-var sound = document.getElementById("music");
+//var sound = document.getElementById("music");
 
 var board;
 var mouseX = 100;
@@ -45,7 +42,6 @@ var temp;
 
 document.body.onload = init();
 canvas.addEventListener('mousemove', mouseM, false);
-//canvas.addEventListener('click', playing, false);
 
 function init(){
 
@@ -115,10 +111,9 @@ function playing(){
 function gameBoard(){
 	this.update = function(){
 
-		if (document.getElementById("musicCheck").checked) {
-			//sound = document.getElementById("music");
-			sound.play();
-		}
+		//if (document.getElementById("musicCheck").checked) {
+			//sound.play();
+		//}
 		c.fillStyle = "black";
 		if(x <= (mouseX+100) && (x+7) >= mouseX && (y+7) >= 350 && y <= 355){
 			if((y+7) == 350){
@@ -204,7 +199,6 @@ function wall(colorW, xBrick, yBrick, wBrick, hBrick, index){
 				yWall[index] = -50;
 			}else if (hits == 1){
 				if(colorW == "purple"){
-					//hits = hits - 1;
 					c.fillStyle = colorW;
 					c.fillRect(-50, -50, 40, 20);
 					impact[index] = true;
@@ -214,7 +208,6 @@ function wall(colorW, xBrick, yBrick, wBrick, hBrick, index){
 				c.fillStyle = "purple";
 				colorW = "purple";
 				c.fillRect(xBrick, yBrick, wBrick, hBrick);
-				//hits = hits -1;
 			}
 			if(x == (xBrick+brickW) || (x+7) == xBrick){
 				speedX = speedX * -1;
@@ -263,9 +256,6 @@ function clear(){
 }
 
 function output(){
-	/*if (document.getElementById("musicCheck").checked){
-		soundEffects();		
-	}*/
 	diff();
 	
 	score = impact.filter(function(value){
@@ -311,12 +301,11 @@ function output(){
 
 function stop(){
 	clearInterval(interval);
-	sound.pause();
-	sound.currentTime = 0;
-	document.getElementById("musicCheck").checked = false;
+	//sound.pause();
+	//sound.currentTime = 0;
+	//document.getElementById("musicCheck").checked = false;
 	if(score==55){
-		//count = score;
-		winnerSound();
+		//winnerSound();
 		if(level == 1){
 			level = 2;
 		}else if(level == 2){
@@ -328,7 +317,7 @@ function stop(){
 		}
 		alert("You Win!");
 	}else{
-		loserSound();
+		//loserSound();
 		alert("You Lose!");
 	}
 	init();
@@ -336,7 +325,6 @@ function stop(){
 
 function updateGameArea() {
 	clear();
-	//diff();
 	x = x + speedX;
 	y = y + speedY;
 	if(x > 595 || x < 1){
@@ -346,12 +334,10 @@ function updateGameArea() {
 		speedY = speedY * -1;
 	}
 	if(y > 360){
-		//checkWin();
 		stop();
 	}
 	ball.update();
 	board.update();
-	//output();
 	for(var i = 0; i < 55; i++){
 		brick[i].crash();
 	}
@@ -595,7 +581,7 @@ function levelFive(){
 		}
 	}
 }
-
+/*
 function soundEffects(){
 	var x = document.getElementById("soundEffect");
 	x.play();
@@ -608,3 +594,4 @@ function loserSound(){
     var x = document.getElementById("loser");
     x.play();
 }
+*/
