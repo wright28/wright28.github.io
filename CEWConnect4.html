@@ -186,13 +186,13 @@ function drop(col){
 	else if(board[0][col] == 0){
 		if(black){
 			var tracker = 1;
-			var pic = '<center><img class = "slot" src = "images/black.jfif"></center>';
+			var pic = '<center><img class = "slot" src = "images/black.png"></center>';
 			black = false;
 			document.getElementById("console").innerHTML = "Red's Turn";
 		}
 		else{
 			var tracker = 2;
-			var pic = '<center><img class = "slot" src = "images/red.jfif"></center>';
+			var pic = '<center><img class = "slot" src = "images/red.png"></center>';
 			black = true;
 			document.getElementById("console").innerHTML = "Black's Turn";
 		}
