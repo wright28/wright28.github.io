@@ -252,8 +252,15 @@ function object(colorOf, xValue, yValue, wValue, hValue){
 	}
 	this.pregame = function(){
 		c.fillStyle = colorOf;
-		c.fillRect((mouseX+50), 342, w, h);
-		x = mouseX+50;
+		var bound;
+		if ((mouseX+50) > 493){
+			bound = mouseX+42;
+		}
+		else{
+			bound = mouseX+50;
+		}
+		c.fillRect((bound), 342, w, h);
+		x = bound;
 		y = 342;
 	}
 }
@@ -339,7 +346,7 @@ function updateGameArea() {
 	//diff();
 	x = x + speedX;
 	y = y + speedY;
-	if(x > 595 || x < 1){
+	if(x > 593 || x < 1){
 		speedX = speedX * -1;
 	}
 	if(y < 1){
